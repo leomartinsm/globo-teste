@@ -17,7 +17,43 @@ import { Vector3 } from 'three';
 export class GlobeIssComponent implements AfterViewInit, OnInit {
   @ViewChild('canvas',{static:false})
   private canvasRef!: ElementRef;
-
+  lines ={
+    "type": "PullRequest",
+    "pulls":[
+      {
+        "type": "pull",
+        "order": 1,
+        "from": "BRA",
+        "to": "BRA",
+        "startLat": "-22.4892066",
+        "startLng": "-46.9756932",
+        "endLat": "-3.7253775",
+        "endLng": "-38.5291916",
+        "arcAlt": 0.05
+      },{
+        "type": "pull",
+        "order": 2,
+        "from": "BRA",
+        "to": "BRA",
+        "startLat": "-22.4892066",
+        "startLng": "-46.9756932",
+        "endLat": "-9.9656652",
+        "endLng": "-67.9046829",
+        "arcAlt": 0.05,
+        "status": true
+      },{
+        "type": "pull",
+        "order": 3,
+        "from": "BRA",
+        "to": "BRA",
+        "endLat": "-22.4892066",
+        "endLng": "-46.9756932",
+        "startLat": "2.8280648",
+        "startLng": "-60.6666869",
+        "arcAlt": 0.05
+      }
+    ]
+  }
   //* Cube Properties
 
   @Input() public rotationSpeedX: number = 0.01;
@@ -73,7 +109,7 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
 
   private loader = new GLTFLoader();
 
-  private Globe = new ThreeGlobe()
+  public Globe = new ThreeGlobe()
   .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
   //.globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
  .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
@@ -143,7 +179,8 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
     this.camera.aspect = window.innerWidth/window.innerHeight;
     this.camera.updateProjectionMatrix();
     this.camera.position.z = 12000;
-
+    this.camera.position.x = -8000;
+    this.camera.position.y = -2000;
 
 
   }
@@ -151,8 +188,7 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
 
 
 
-
-  private getAspectRatio() {
+  getAspectRatio() {
     return this.canvas.clientWidth / this.canvas.clientHeight;
   }
 
@@ -162,7 +198,7 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
  * @private
  * @memberof GlobeIssComponent
  */
-  private startRenderingLoop() {
+  startRenderingLoop() {
     //* Renderer
     // Use canvas element in template
     this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas });
@@ -170,13 +206,30 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
     this.renderer.setSize(this.canvas.clientWidth, this.canvas.clientHeight);
     this.controls = new OrbitControls( this.camera, this.renderer.domElement );
 
-
+    this.Globe.arcsData(this.lines.pulls)
+    .arcColor((e) =>{
+      return e.status ? "#9cff00" :"#ff4000"
+    })
+    .arcAltitude((e:any)=>{
+      return e.arcAlt;
+    })
+    .arcStroke((e:any)=>{
+      return e.status ? 0.8: 0.5;
+    })
+    .arcDashLength(0.9)
+    .arcDashGap(4)
+    .arcDashAnimateTime(1000)
+    .arcsTransitionDuration(1000)
+    .arcDashInitialGap((e:any)=>{
+      return e.order *1;
+    })
+    .labelColor(()=>"#ffcb21")
+    //.labelsData(map.Map)
     let component: GlobeIssComponent = this;
     (function render() {
       requestAnimationFrame(render);
 
       component.renderer.render(component.scene, component.camera);
-
     }());
   }
 
@@ -189,11 +242,28 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
   ngOnInit(): void {
 
   }
+  onWindowresize(){
+    let aspectRatio = window.innerWidth/window.innerHeight;
+    this.camera = new THREE.PerspectiveCamera(
+      this.fieldOfView,
+      aspectRatio,
+      this.nearClippingPlane,
+      this.farClippingPlane
+    )
+    this.camera.aspect = window.innerWidth/window.innerHeight;
+    this.camera.updateProjectionMatrix();
+    this.camera.position.z = 12000;
+    this.camera.position.x = -8000;
+    this.camera.position.y = -2000;
+    //teste
+    console.log('alo')
+    this.startRenderingLoop();
 
+  }
   ngAfterViewInit(): void {
     this.createScene();
     this.startRenderingLoop();
-
+    window.addEventListener('resize',this.onWindowresize,false)
   }
 
 

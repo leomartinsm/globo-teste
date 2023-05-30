@@ -53,7 +53,7 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
         "arcAlt": 0.05
       },{
         "type": "pull",
-        "order": 4,
+        "order": 1,
         "from": "BRA",
         "to": "BRA",
         "endLat": "-22.4892066",
@@ -63,7 +63,7 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
         "arcAlt": 0.05
       },{
         "type": "pull",
-        "order": 1,
+        "order": 2,
         "from": "BRA",
         "to": "BRA",
         "endLat": "-22.4892066",
@@ -73,7 +73,7 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
         "arcAlt": 0.05
       },{
         "type": "pull",
-        "order": 2,
+        "order": 3,
         "from": "BRA",
         "to": "BRA",
         "endLat": "-22.4892066",
@@ -83,7 +83,7 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
         "arcAlt": 0.05
       },{
         "type": "pull",
-        "order": 3,
+        "order": 4,
         "from": "BRA",
         "to": "BRA",
         "endLat": "-22.4892066",
@@ -93,7 +93,7 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
         "arcAlt": 0.05
       },{
         "type": "pull",
-        "order": 4,
+        "order": 5,
         "from": "BRA",
         "to": "BRA",
         "endLat": "-22.4892066",
@@ -103,7 +103,7 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
         "arcAlt": 0.05
       },{
         "type": "pull",
-        "order": 1,
+        "order": 6,
         "from": "BRA",
         "to": "BRA",
         "endLat": "-22.4892066",
@@ -113,7 +113,7 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
         "arcAlt": 0.05
       },{
         "type": "pull",
-        "order": 2,
+        "order": 7,
         "from": "BRA",
         "to": "BRA",
         "endLat": "-22.4892066",
@@ -123,7 +123,7 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
         "arcAlt": 0.05
       },{
         "type": "pull",
-        "order": 3,
+        "order": 8,
         "from": "BRA",
         "to": "BRA",
         "endLat": "-22.4892066",
@@ -133,7 +133,7 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
         "arcAlt": 0.05
       },{
         "type": "pull",
-        "order": 4,
+        "order": 1,
         "from": "BRA",
         "to": "BRA",
         "endLat": "-22.4892066",
@@ -143,7 +143,7 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
         "arcAlt": 0.05
       },{
         "type": "pull",
-        "order": 4,
+        "order": 2,
         "from": "BRA",
         "to": "BRA",
         "endLat": "-22.4892066",
@@ -153,7 +153,7 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
         "arcAlt": 0.05
       },{
         "type": "pull",
-        "order": 4,
+        "order": 3,
         "from": "BRA",
         "to": "BRA",
         "endLat": "-22.4892066",
@@ -173,7 +173,7 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
         "arcAlt": 0.05
       },{
         "type": "pull",
-        "order": 4,
+        "order": 5,
         "from": "BRA",
         "to": "BRA",
         "endLat": "-22.4892066",
@@ -183,7 +183,7 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
         "arcAlt": 0.05
       },{
         "type": "pull",
-        "order": 4,
+        "order": 6,
         "from": "BRA",
         "to": "BRA",
         "endLat": "-22.4892066",
@@ -193,7 +193,7 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
         "arcAlt": 0.05
       },{
         "type": "pull",
-        "order": 4,
+        "order": 7,
         "from": "BRA",
         "to": "BRA",
         "endLat": "-22.4892066",
@@ -203,7 +203,7 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
         "arcAlt": 0.05
       },{
         "type": "pull",
-        "order": 4,
+        "order": 8,
         "from": "BRA",
         "to": "BRA",
         "endLat": "-22.4892066",

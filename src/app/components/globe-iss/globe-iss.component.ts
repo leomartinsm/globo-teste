@@ -51,7 +51,168 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
         "startLat": "2.8280648",
         "startLng": "-60.6666869",
         "arcAlt": 0.05
-      }
+      },{
+        "type": "pull",
+        "order": 4,
+        "from": "BRA",
+        "to": "BRA",
+        "endLat": "-22.4892066",
+        "endLng": "-46.9756932",
+        "startLat": "3.4640866",
+        "startLng": "-76.5311993",
+        "arcAlt": 0.05
+      },{
+        "type": "pull",
+        "order": 1,
+        "from": "BRA",
+        "to": "BRA",
+        "endLat": "-22.4892066",
+        "endLng": "-46.9756932",
+        "startLat": "-24.956774",
+        "startLng": "-53.4980834",
+        "arcAlt": 0.05
+      },{
+        "type": "pull",
+        "order": 2,
+        "from": "BRA",
+        "to": "BRA",
+        "endLat": "-22.4892066",
+        "endLng": "-46.9756932",
+        "startLat": "-28.3336367",
+        "startLng": "-59.8657016",
+        "arcAlt": 0.05
+      },{
+        "type": "pull",
+        "order": 3,
+        "from": "BRA",
+        "to": "BRA",
+        "endLat": "-22.4892066",
+        "endLng": "-46.9756932",
+        "startLat": "-20.4591246",
+        "startLng": "-54.6544273",
+        "arcAlt": 0.05
+      },{
+        "type": "pull",
+        "order": 4,
+        "from": "BRA",
+        "to": "BRA",
+        "endLat": "-22.4892066",
+        "endLng": "-46.9756932",
+        "startLat": "-16.679951",
+        "startLng": "-49.3218812",
+        "arcAlt": 0.05
+      },{
+        "type": "pull",
+        "order": 1,
+        "from": "BRA",
+        "to": "BRA",
+        "endLat": "-22.4892066",
+        "endLng": "-46.9756932",
+        "startLat": "-15.7714166",
+        "startLng": "-48.0252976",
+        "arcAlt": 0.05
+      },{
+        "type": "pull",
+        "order": 2,
+        "from": "BRA",
+        "to": "BRA",
+        "endLat": "-22.4892066",
+        "endLng": "-46.9756932",
+        "startLat": "-13.4417569",
+        "startLng": "-49.1492308",
+        "arcAlt": 0.05
+      },{
+        "type": "pull",
+        "order": 3,
+        "from": "BRA",
+        "to": "BRA",
+        "endLat": "-22.4892066",
+        "endLng": "-46.9756932",
+        "startLat": "-10.2274855",
+        "startLng": "-48.336615",
+        "arcAlt": 0.05
+      },{
+        "type": "pull",
+        "order": 4,
+        "from": "BRA",
+        "to": "BRA",
+        "endLat": "-22.4892066",
+        "endLng": "-46.9756932",
+        "startLat": "-15.5961554",
+        "startLng": "-56.1690439",
+        "arcAlt": 0.05
+      },{
+        "type": "pull",
+        "order": 4,
+        "from": "BRA",
+        "to": "BRA",
+        "endLat": "-22.4892066",
+        "endLng": "-46.9756932",
+        "startLat": "-10.8814528",
+        "startLng": "-61.9477055",
+        "arcAlt": 0.05
+      },{
+        "type": "pull",
+        "order": 4,
+        "from": "BRA",
+        "to": "BRA",
+        "endLat": "-22.4892066",
+        "endLng": "-46.9756932",
+        "startLat": "-1.4470261",
+        "startLng": "-48.6134194",
+        "arcAlt": 0.05
+      },{
+        "type": "pull",
+        "order": 4,
+        "from": "BRA",
+        "to": "BRA",
+        "endLat": "-22.4892066",
+        "endLng": "-46.9756932",
+        "startLat": "-3.2081449",
+        "startLng": "-52.2165115",
+        "arcAlt": 0.05
+      },{
+        "type": "pull",
+        "order": 4,
+        "from": "BRA",
+        "to": "BRA",
+        "endLat": "-22.4892066",
+        "endLng": "-46.9756932",
+        "startLat": "-7.2085479",
+        "startLng": "-39.3178777",
+        "arcAlt": 0.05
+      },{
+        "type": "pull",
+        "order": 4,
+        "from": "BRA",
+        "to": "BRA",
+        "endLat": "-22.4892066",
+        "endLng": "-46.9756932",
+        "startLat": "-10.8951991",
+        "startLng": "-37.1071213",
+        "arcAlt": 0.05
+      },{
+        "type": "pull",
+        "order": 4,
+        "from": "BRA",
+        "to": "BRA",
+        "endLat": "-22.4892066",
+        "endLng": "-46.9756932",
+        "startLat": "-8.7834153",
+        "startLng": "-63.8927403",
+        "arcAlt": 0.05
+      },{
+        "type": "pull",
+        "order": 4,
+        "from": "BRA",
+        "to": "BRA",
+        "endLat": "-22.4892066",
+        "endLng": "-46.9756932",
+        "startLat": "-3.1124383",
+        "startLng": "-60.0235051",
+        "arcAlt": 0.05
+      },
+
     ]
   }
   //* Cube Properties
@@ -176,9 +337,9 @@ export class GlobeIssComponent implements AfterViewInit, OnInit {
       this.nearClippingPlane,
       this.farClippingPlane
     )
-    this.camera.aspect = window.innerWidth/window.innerHeight;
+    this.camera.aspect = ((window.innerWidth/100)*70)/window.innerHeight;
     this.camera.updateProjectionMatrix();
-    this.camera.position.z = 12000;
+    this.camera.position.z = 9000;
     this.camera.position.x = -8000;
     this.camera.position.y = -2000;
 
